@@ -1,6 +1,7 @@
 package com.dimensiondata.command;
 
 import com.beust.jcommander.JCommander;
+import com.dimensiondata.client.exception.CloudServerClientException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -31,15 +32,19 @@ public class CommandLineController implements CommandLineRunner {
         try {
             commander.parse(strings);
             String parsedCommand = commander.getParsedCommand();
-            if ( parsedCommand == null )
+            if (parsedCommand == null)
                 throw new Exception("Unrecognized command");
             Object result = commands.get(parsedCommand).execute();
             if (result != null)
                 logger.info(result.toString());
 
+            logger.info("Command " +parsedCommand+ " ran successfully");
             System.exit(0);
+        } catch (CloudServerClientException e ) {
+            logger.error(e.toString());
+            System.exit(-1);
         } catch (Exception e) {
-            logger.error("ERROR!!!" + e.getMessage());
+            logger.error("General error" + e.getMessage());
             commander.usage();
             System.exit(-1);
         }

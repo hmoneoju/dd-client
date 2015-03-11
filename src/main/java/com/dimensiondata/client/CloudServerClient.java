@@ -7,9 +7,14 @@ import java.util.List;
 
 @Service
 public interface CloudServerClient {
-    void createServers(List<Server> servers);
-    long count();
-    void update(Long id, String name);
+
+    void createServers(String fileName);
+
+    Long count();
+
+    Server update(Server server);
+
     void delete(Long id);
+
     List<Server> list();
 }

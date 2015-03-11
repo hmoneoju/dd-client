@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs2:server xmlns:xs2="http://www.opsource.net/simpleapp">
-    <xs2:id>1</xs2:id>
-    <xs2:name>Server1</xs2:name>
-</xs2:server>
-<xs2:server xmlns:xs2="http://www.opsource.net/simpleapp">
-    <xs2:id>2</xs2:id>
-    <xs2:name>Server2</xs2:name>
-</xs2:server>
-<xs2:server xmlns:xs2="http://www.opsource.net/simpleapp">
-    <xs2:id>2</xs2:id>
-    <xs2:name>Server3</xs2:name>
-</xs2:server>
+<servers>
+    <server>
+        <id>1</id>
+        <name>Server1</name>
+    </server>
+    <server>
+        <id>2</id>
+        <name>Server2</name>
+    </server>
+</servers>
+

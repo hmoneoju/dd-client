@@ -2,9 +2,6 @@ package com.dimensiondata.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
-import javax.xml.bind.annotation.XmlRootElement;
-
-@XmlRootElement
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Server {
 
@@ -27,5 +24,12 @@ public class Server {
         this.name = name;
     }
 
+    @Override
+    public String toString() {
+        return new StringBuilder()
+                .append("[id=").append(id)
+                .append(",name=").append(name).append("]")
+                .toString();
+    }
 
 }

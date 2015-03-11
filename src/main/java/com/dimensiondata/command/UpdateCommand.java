@@ -2,6 +2,7 @@ package com.dimensiondata.command;
 
 import com.beust.jcommander.Parameter;
 import com.beust.jcommander.Parameters;
+import com.dimensiondata.model.Server;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -16,7 +17,10 @@ public class UpdateCommand extends AbstractCommand implements Command<Void> {
 
     @Override
     public Void execute() {
-        cloudServerClient.update(id, name);
+        Server server = new Server();
+        server.setId(id);
+        server.setName(name);
+        cloudServerClient.update(server);
         return null;
     }
 
