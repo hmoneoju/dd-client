@@ -30,7 +30,6 @@ public class Application {
     @Autowired private DeleteCommand deleteCommand;
     @Autowired private UpdateCommand updateCommand;
 
-
     @Bean
     public Map<String, Command> commands() {
         Map<String, Command> mapParserCommands = new HashMap<String, Command>();

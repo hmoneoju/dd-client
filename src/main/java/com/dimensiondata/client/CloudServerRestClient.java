@@ -2,11 +2,14 @@ package com.dimensiondata.client;
 
 import com.dimensiondata.model.Server;
 import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
 @Component("restClient")
 public class CloudServerRestClient implements CloudServerClient {
+
+    RestTemplate restTemplate;
 
     @Override
     public void createServers(List<Server> servers) {

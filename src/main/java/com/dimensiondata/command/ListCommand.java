@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-@Parameters(commandDescription = "List the servers within the cloud server system")
+@Parameters(commandDescription = "the servers within the cloud server system")
 public class ListCommand extends AbstractCommand implements Command<List<Server>> {
 
     @Override
