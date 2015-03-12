@@ -38,17 +38,16 @@ public class CommandLineController implements CommandLineRunner {
             if (result != null)
                 logger.info(result.toString());
 
-            logger.info("Command " +parsedCommand+ " ran successfully");
+            logger.info("Command " +parsedCommand+ " ran successfully.");
             System.exit(0);
         } catch (CloudServerClientException e ) {
             logger.error(e.toString());
             System.exit(-1);
         } catch (Exception e) {
-            logger.error("General error" + e.getMessage());
+            logger.error("General error." + e.getMessage());
             commander.usage();
             System.exit(-1);
         }
     }
-
 
 }
