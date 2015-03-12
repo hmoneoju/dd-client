@@ -1,11 +1,9 @@
 package com.dimensiondata.client;
 
 import com.dimensiondata.model.Server;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
 public interface CloudServerClient {
 
     void createServers(String fileName);
@@ -17,4 +15,5 @@ public interface CloudServerClient {
     void delete(Long id);
 
     List<Server> list();
+
 }

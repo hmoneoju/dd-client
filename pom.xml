@@ -6,7 +6,7 @@
 
     <groupId>com.dimensiondata</groupId>
     <artifactId>client</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
 
     <properties>
         <springVersionProperty>4.1.5.RELEASE</springVersionProperty>
